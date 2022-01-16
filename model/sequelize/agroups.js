@@ -1,33 +1,41 @@
 import {Model, DataTypes} from 'sequelize'
 
 
-export default class access_permisions extends Model{
+export default class groups extends Model{
     
     static initModel(sequelize){
         this.init({
-            aid: {
+            agid: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
-            uid:{
-              type: DataTypes.INTEGER,
+            description: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            },
+            status:{
+              type: DataTypes.TINYINT({length: 1}),
               allowNull: false
             },
-            attribute_id:{
-                type: DataTypes.INTEGER,
+            dflag:{
+                type: DataTypes.TINYINT({length: 1}),
                 allowNull: false
             },
             comp_id:{
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            access_type:{
-                type: DataTypes.TEXT,
+            uid:{
+                type: DataTypes.INTEGER,
                 allowNull: false
             },
-            conditions:{
-                type: DataTypes.TEXT,
+            aaccess_id:{
+                type: DataTypes.INTEGER,
+                allowNull: false
+            },
+            aattribute_id:{
+                type: DataTypes.INTEGER,
                 allowNull: false
             },
             created_by:{
@@ -40,7 +48,7 @@ export default class access_permisions extends Model{
             },
         }, {
             sequelize,
-            tableName: "",
+            tableName: "agroups",
             createdAt: "created_at",
             updatedAt: "updated_at",
             indexes:[]
