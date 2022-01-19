@@ -37,6 +37,28 @@ function populateTestData(){
         created_by: 1,
         updated_by: 1
     })
+
+    models.aaccess_permision.create({
+        aid: 2,
+        uid: 1,
+        attribute_id: 2,
+        comp_id: 1,
+        access_type: '{}',
+        conditions: '{}',
+        created_by: 1,
+        updated_by: 1
+    })
+
+    models.aaccess_permision.create({
+        aid: 3,
+        uid: 1,
+        attribute_id: 3,
+        comp_id: 1,
+        access_type: '{}',
+        conditions: '{}',
+        created_by: 1,
+        updated_by: 1
+    })
     
     models.agroups.create({
         agid: 1,
@@ -71,7 +93,7 @@ function populateTestData(){
         dflag: 0,
         comp_id: 1,
         uid: 1,
-        aaccess_id: 1,
+        aaccess_id: 2,
         aattribute_id: 1,
         created_by: 1,
         updated_by: 1,

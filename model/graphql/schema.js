@@ -3,7 +3,7 @@ import { buildSchema } from 'graphql'
 const schema = `
 
 type Query{
-    access_permission: [AccessPermission]
+    access_permission(attribute_id: Int): [AccessPermission]
 }
 
 type AccessPermission{
